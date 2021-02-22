@@ -9,7 +9,7 @@ const App = () => {
       <header>Logo here</header>
       <Router>
         <Switch>
-          <Route path="/user">
+          <Route path="/user/:name">
             <User />
           </Route>
           <Route path="/">

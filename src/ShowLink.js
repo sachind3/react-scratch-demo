@@ -22,12 +22,17 @@ function ShowLink(props) {
     }
   };
 
+  const checkLink = () => {
+    window.open(linkRef.current.value, "_blank");
+    // window.location.href = linkRef.current.value;
+  };
+
   return (
     <div className="backdrop">
       <div className="card">
         <input
           ref={linkRef}
-          defaultValue={`http://localhost:3000/user?name=${props.name}`}
+          defaultValue={`${window.location}user/${props.name}`}
           style={{ pointerEvents: "none" }}
         />
         <div className="btn-group">
@@ -39,6 +44,9 @@ function ShowLink(props) {
           </button>
           <button type="button" onClick={resetLink}>
             Reset
+          </button>
+          <button type="button" onClick={checkLink}>
+            Check link
           </button>
         </div>
       </div>

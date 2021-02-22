@@ -9,11 +9,11 @@ const App = () => {
       <header>Logo here</header>
       <Router>
         <Switch>
-          <Route path="/user/:name">
-            <User />
-          </Route>
-          <Route path="/">
+          <Route exact match path="/">
             <Admin />
+          </Route>
+          <Route exact path="/user/:name">
+            <User />
           </Route>
         </Switch>
       </Router>
